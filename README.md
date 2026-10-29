@@ -23,3 +23,9 @@ Replace `assets/Aashish_Upadhyaya_CV.pdf` with a newer version using the same fi
 - This site does not publish birth date, marital status, or full street address.
 - Experience durations reflect the supplied CV and may overlap. No chronological dates are inferred.
 - The chat integration remains inactive until you add your actual tawk.to IDs.
+
+## Profile photos
+- `assets/hero-profile.jpg`: homepage laptop portrait.
+- `assets/about-profile.jpg`: About section formal suit portrait.
+- `assets/formal-profile.jpg`: Contact section headshot.
+These are the three photos selected from the uploaded set.
