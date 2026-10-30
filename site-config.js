@@ -1,6 +1,17 @@
-// Fill these public (non-secret) values from Supabase Project Settings > API.
-// Never put the service_role key or a password in this file.
+// ============================================
+// AU STUDIO - SUPABASE CONFIGURATION
+// Aashish Upadhyaya Portfolio Website
+// ============================================
+
+// Supabase public configuration
+// Never place passwords or secret/service-role keys here.
+
 window.AU_SITE_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://ctesrjwwxtulongjtkpp.supabase.co",
+
+  supabaseAnonKey: "sb_publishable_e2Gd7xdEDuCUdH5BSLUG3w_rKA8eZ8j"
 };
+
+// ============================================
+// END OF CONFIGURATION
+// ============================================
