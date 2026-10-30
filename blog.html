@@ -43,6 +43,14 @@
   .brand .brand-icon { width: 42px !important; height: 42px !important; }
   .au-footer-image { width: 170px; }
 }
+</style><style>
+/* AU branding: matching header and footer across the portfolio */
+.site-header .brand .brand-icon {width:60px!important;height:50px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;}
+.site-header .brand .au-brand-image {width:100%!important;height:100%!important;object-fit:contain!important;}
+footer .blog-footer-layout {width:min(1180px,calc(100% - 48px));margin:0 auto;min-height:130px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+footer .blog-footer-layout .au-footer-image {width:320px!important;max-width:100%!important;height:auto!important;margin:0!important;}
+footer .blog-footer-layout .foot {min-height:0;flex:1;justify-content:space-between;gap:24px;}
+@media(max-width:760px){footer .blog-footer-layout {justify-content:center;padding:24px 0;text-align:center;}footer .blog-footer-layout .au-footer-image {width:250px!important;}footer .blog-footer-layout .foot {width:100%;flex-basis:100%;}.site-header .brand .brand-icon {width:45px!important;height:40px!important;}}
 </style></head>
 <body>
 <div aria-hidden="true" id="reading-progress"></div>
@@ -80,6 +88,6 @@ sudo apt update # Refresh package metadata</code></pre><p><strong>Project:</stro
 <div class="author-card"><div class="avatar large">AU</div><div><span class="eyebrow">ABOUT THE AUTHOR</span><h3>Aashish Upadhyaya</h3><p>IT professional and Support Manager focused on technical support, networking, troubleshooting and practical technology education.</p><a href="index.html#contact">Get in touch ↗</a></div></div>
 <div class="share"><span>Found this helpful? Share it:</span><button id="share-btn" type="button">Share article ↗</button><button id="copy-btn" type="button">Copy link</button></div>
 </article></div></main>
-<footer><img alt="Aashish Upadhyaya — Build Solve Grow" class="au-footer-image" src="au-horizontal.png"/><div class="wrap foot"><span>© <span id="year"></span> Aashish Upadhyaya. All rights reserved.</span><a href="index.html">← Back to portfolio</a></div></footer>
+<footer><div class="blog-footer-layout"><img alt="Aashish Upadhyaya — Build Solve Grow" class="au-footer-image" src="au-horizontal.png"/><div class="wrap foot"><span>© <span id="year"></span> Aashish Upadhyaya. All rights reserved.</span><a href="index.html">← Back to portfolio</a></div></div></footer>
 <button aria-label="Back to top" id="top-btn">↑</button><script defer="" src="blog.js"></script>
 </body></html>
