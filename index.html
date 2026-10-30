@@ -272,4 +272,4 @@ footer .au-footer-image{width:145px!important;max-width:100%!important;height:au
   const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('au-waiting');entry.target.classList.add('au-in-view');observer.unobserve(entry.target);}})},{threshold:.08,rootMargin:'0px 0px 20px 0px'});
   targets.forEach((el,i)=>{el.classList.add('au-scroll-animate');if(el.getBoundingClientRect().top>window.innerHeight-20){el.classList.add('au-waiting');observer.observe(el)}else{el.classList.add('au-in-view')}});
 })();
-</script></body></html>
+</script><script src="site-config.js"></script><script src="site-content.js"></script></body></html>
