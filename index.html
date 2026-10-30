@@ -73,37 +73,31 @@ a:focus-visible,button:focus-visible{outline:3px solid #60a5fa!important;outline
 <a aria-label="Chat with Aashish on WhatsApp" class="whatsapp-float" href="https://wa.me/9779844392376?text=Hello%20Aashish%2C%20I%20visited%20your%20portfolio%20website." rel="noopener noreferrer" target="_blank" title="Chat on WhatsApp">
 <svg aria-hidden="true" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 .8A15.1 15.1 0 0 0 3 23.7L.9 31l7.5-2A15.2 15.2 0 1 0 16 .8zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.6 1.5 3.6 3.6 5 5.1 2 1.4 3.6 1.9 4.8 2.1.7.1 1.4.1 2-.1.6-.2 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z"></path></svg>
 </a>
-<!-- tawk.to live chat: connected to Aashish Upadhyaya property -->
+<!-- Botpress AI assistant for Aashish Upadhyaya -->
 <style>
-/* Keep WhatsApp above the chat launcher, including on smaller screens. */
+/* Leave space for the Botpress chat launcher above the WhatsApp button. */
 .whatsapp-float { bottom: 108px !important; }
-@media (max-width:768px) { .whatsapp-float { bottom: 100px !important; } }
+@media (max-width:768px) { .whatsapp-float { bottom: 104px !important; } }
 </style>
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/10/30/05/20261030054822-B5GBYC0L.js" defer></script>
 <script>
-window.Tawk_API = window.Tawk_API || {};
-window.Tawk_LoadStart = new Date();
 (function () {
-  var s1 = document.createElement('script');
-  var s0 = document.getElementsByTagName('script')[0];
-  s1.async = true;
-  s1.src = 'https://embed.tawk.to/6ae419cbbcc79b3475d7f49b/1k65g9hpe';
-  s1.charset = 'UTF-8';
-  s1.setAttribute('crossorigin', '*');
-  s0.parentNode.insertBefore(s1, s0);
+  var button = document.getElementById('chatButton');
+  var note = document.getElementById('chatNote');
+  if (button) {
+    button.textContent = '🤖 Chat with Aashish AI Assistant';
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (window.botpress && typeof window.botpress.open === 'function') {
+        window.botpress.open();
+      } else if (note) {
+        note.textContent = 'AI chat is loading. Please try again in a moment or use the floating chat button.';
+      }
+    }, true);
+  }
+  if (note) note.textContent = 'Ask the AI assistant about my experience, skills, projects, and CV.';
 })();
-// Make the existing portfolio chat button open the installed widget.
-var portfolioChatButton = document.getElementById('chatButton');
-if (portfolioChatButton) {
-  portfolioChatButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
-      window.Tawk_API.maximize();
-    } else {
-      var note = document.getElementById('chatNote');
-      if (note) note.textContent = 'Live chat is loading. Please try again in a moment.';
-    }
-  }, true);
-}
 </script>
 </body></html>
