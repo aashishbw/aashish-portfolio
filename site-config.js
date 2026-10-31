@@ -7,9 +7,9 @@
 // Never place passwords or secret/service-role keys here.
 
 window.AU_SITE_CONFIG = {
-  supabaseUrl: "https://ctesrjwwxtulongjtkpp.supabase.co",
+  supabaseUrl: "https://lbryfdvdxruvzmpsjhsl.supabase.co",
 
-  supabaseAnonKey: "sb_publishable_e2Gd7xdEDuCUdH5BSLUG3w_rKA8eZ8j"
+  supabaseAnonKey: "sb_publishable_11drjy1BXIL5N1vuMFKeTg_I4Egn6Tk"
 };
 
 // ============================================
