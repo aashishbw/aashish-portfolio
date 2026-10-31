@@ -1,0 +1,1 @@
+WhatsApp and Aashish AI contact buttons now appear in the Contact section instead of as floating page shortcuts. The AI chat opens when a visitor taps its button. Upload all files preserving folders. If Botpress still displays its default launcher, disable the floating launcher in Botpress Webchat settings; widget versions can use different launcher selectors.
