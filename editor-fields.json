@@ -1,134 +1,151 @@
 [
   {
     "key": "hero_name",
-    "label": "Home \u00b7 Name",
+    "label": "Home · Name",
     "selector": "#home h1",
     "property": "text"
   },
   {
     "key": "hero_intro",
-    "label": "Home \u00b7 Intro",
+    "label": "Home · Intro",
     "selector": "#home .intro",
     "property": "text"
   },
   {
     "key": "hero_description",
-    "label": "Home \u00b7 Description",
+    "label": "Home · Description",
     "selector": "#home .lead",
     "property": "text"
   },
   {
     "key": "availability",
-    "label": "Home \u00b7 Availability",
+    "label": "Home · Availability",
     "selector": "#home .eyebrow",
     "property": "text"
   },
   {
     "key": "about_heading",
-    "label": "About \u00b7 Heading",
+    "label": "About · Heading",
     "selector": "#about .section-heading h2",
     "property": "text"
   },
   {
     "key": "about_intro",
-    "label": "About \u00b7 First paragraph",
+    "label": "About · First paragraph",
     "selector": "#about .about-copy .about-paragraph:first-of-type",
     "property": "text"
   },
   {
     "key": "about_location",
-    "label": "About \u00b7 Location",
+    "label": "About · Location",
     "selector": "#about .about-panel strong:first-of-type",
     "property": "text"
   },
   {
     "key": "experience_heading",
-    "label": "Experience \u00b7 Heading",
+    "label": "Experience · Heading",
     "selector": "#experience .section-heading h2",
     "property": "text"
   },
   {
     "key": "skills_heading",
-    "label": "Skills \u00b7 Heading",
+    "label": "Skills · Heading",
     "selector": "#skills .section-heading h2",
     "property": "text"
   },
   {
     "key": "education_heading",
-    "label": "Education \u00b7 Heading",
+    "label": "Education · Heading",
     "selector": "#education .section-heading h2",
     "property": "text"
   },
   {
     "key": "blog_heading",
-    "label": "Blog \u00b7 Heading",
+    "label": "Blog · Heading",
     "selector": "#blog .section-heading h2",
     "property": "text"
   },
   {
     "key": "blog_title",
-    "label": "Blog \u00b7 Featured title",
+    "label": "Blog · Featured title",
     "selector": "#blog .blog-feature h3",
     "property": "text"
   },
   {
     "key": "blog_summary",
-    "label": "Blog \u00b7 Featured summary",
+    "label": "Blog · Featured summary",
     "selector": "#blog .blog-feature p",
     "property": "text"
   },
   {
     "key": "contact_heading",
-    "label": "Contact \u00b7 Heading",
+    "label": "Contact · Heading",
     "selector": "#contact h2",
     "property": "text"
   },
   {
     "key": "contact_description",
-    "label": "Contact \u00b7 Description",
+    "label": "Contact · Description",
     "selector": "#contact .contact-box > p:first-of-type",
     "property": "text"
   },
   {
     "key": "contact_details",
-    "label": "Contact \u00b7 Details",
+    "label": "Contact · Details",
     "selector": "#contact .contact-email",
     "property": "text"
   },
   {
     "key": "hero_photo",
-    "label": "Media \u00b7 Hero photo",
+    "label": "Media · Hero photo",
     "selector": "#home .hero-card img",
-    "property": "src"
+    "property": "src",
+    "defaultValue": "/hero-profile.jpg"
   },
   {
     "key": "about_photo",
-    "label": "Media \u00b7 About photo",
+    "label": "Media · About photo",
     "selector": "#about .about-photo",
-    "property": "src"
+    "property": "src",
+    "defaultValue": "/about-profile.jpg"
   },
   {
     "key": "contact_photo",
-    "label": "Media \u00b7 Contact photo",
+    "label": "Media · Contact photo",
     "selector": "#contact .contact-photo",
-    "property": "src"
+    "property": "src",
+    "defaultValue": "/formal-profile.jpg"
   },
   {
     "key": "cv_link",
-    "label": "Media \u00b7 CV download",
+    "label": "Media · CV download",
     "selector": "header.nav .nav-cta",
     "property": "href"
   },
   {
     "key": "email_link",
-    "label": "Contact \u00b7 Email button",
+    "label": "Contact · Email button",
     "selector": "#contact a[href^=\"mailto:\"]",
     "property": "href"
   },
   {
     "key": "phone_link",
-    "label": "Contact \u00b7 Phone button",
+    "label": "Contact · Phone button",
     "selector": "#contact a[href^=\"tel:\"]",
     "property": "href"
+  },
+  {
+    "key": "header_logo",
+    "label": "Media · Header logo",
+    "selector": "header.nav .au-brand-image, .login-logo, .identity img",
+    "property": "src",
+    "defaultValue": "/au-logo.png"
+  },
+  {
+    "key": "footer_logo",
+    "label": "Media · Footer logo",
+    "selector": "footer .au-footer-image",
+    "property": "src",
+    "defaultValue": "/au-logo.png"
   }
 ]
