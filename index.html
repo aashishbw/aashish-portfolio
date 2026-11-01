@@ -299,20 +299,30 @@ footer .au-footer-image{width:145px!important;max-width:100%!important;height:au
 <script>
 (function(){
   const launcher = document.getElementById('au-fixed-chat');
+  let chatOpened = false;
+  function suppressNative(){
+    if(chatOpened) return;
+    if(window.botpress && typeof window.botpress.hide === 'function') window.botpress.hide();
+  }
+  function bindBotpress(){
+    if(!window.botpress || typeof window.botpress.on !== 'function') return false;
+    window.botpress.on('webchat:ready', suppressNative);
+    window.botpress.on('webchat:opened', function(){ chatOpened = true; });
+    window.botpress.on('webchat:closed', function(){ chatOpened = false; suppressNative(); });
+    suppressNative();
+    return true;
+  }
   launcher.addEventListener('click', function(){
-    if(window.botpress && typeof window.botpress.open === 'function'){
-      window.botpress.open();
-    }
+    if(!window.botpress) return;
+    if(typeof window.botpress.show === 'function') window.botpress.show();
+    if(typeof window.botpress.open === 'function') window.botpress.open();
   });
-  function hideNativeLauncher(){
-    if(window.botpress && typeof window.botpress.hide === 'function'){
-      window.botpress.hide();
-    }
+  if(!bindBotpress()){
+    let attempts = 0;
+    const timer = setInterval(function(){
+      if(bindBotpress() || ++attempts > 60) clearInterval(timer);
+    }, 500);
   }
-  if(window.botpress && typeof window.botpress.on === 'function'){
-    window.botpress.on('webchat:ready', hideNativeLauncher);
-  }
-  window.addEventListener('load', function(){setTimeout(hideNativeLauncher, 1500);});
 })();
 </script>
 <!-- Botpress AI assistant for Aashish Upadhyaya -->
