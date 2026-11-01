@@ -242,6 +242,23 @@ footer .au-footer-image{width:145px!important;max-width:100%!important;height:au
 .au-contact-actions .au-whatsapp-inline::after{content:'WhatsApp';font-size:16px}
 .au-contact-actions .au-whatsapp-inline svg{width:24px;height:24px;fill:currentColor}
 .au-contact-actions #chatButton{position:static!important;inset:auto!important;margin:0;min-height:52px}
+/* Keep the Botpress launcher fully inside the mobile viewport. */
+#bp-web-widget-container, #bp-web-widget-container iframe,
+.bpFab, .bp-fab, .bpWebchatFab, .bp-webchat-fab,
+[data-testid="bp-webchat-fab"], [data-testid="webchat-fab"] {
+  max-width: calc(100vw - 32px);
+}
+.bpFab, .bp-fab, .bpWebchatFab, .bp-webchat-fab,
+[data-testid="bp-webchat-fab"], [data-testid="webchat-fab"] {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  left: auto !important;
+  top: auto !important;
+  width: 56px !important;
+  height: 56px !important;
+  transform: none !important;
+}
 /* Botpress chat is opened on demand from the Contact button, not as a floating launcher. */
 #bp-web-widget-container button[aria-label*="chat" i],
 .bpFab, .bp-fab, .bpWebchatFab, .bp-webchat-fab,
