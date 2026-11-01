@@ -1,6 +1,6 @@
 /* Aashish Upadhyaya — restrained orange accent layer.
    Keeps AU Studio heading main/highlight colors independently editable. */
-:root { --au-orange:#F97316; --au-orange-soft:#FDBA74; }
+:root { --au-orange:#eb7124; --au-orange-soft:#FDBA74; }
 /* Small warm accent on section labels */
 .section-heading .kicker, .contact-section .kicker {
   border-left:3px solid var(--au-orange);
@@ -8,16 +8,16 @@
 }
 /* Warm hover interactions, without replacing the blue brand */
 .nav a:hover, header.nav nav a:hover { color:var(--au-orange) !important; }
-.btn.primary:hover { box-shadow:0 10px 30px rgba(249,115,22,.26); }
+.btn.primary:hover { box-shadow:0 10px 30px rgba(235,113,36,.26); }
 .skill-card:hover, .edu-card:hover, .blog-feature:hover {
-  border-color:rgba(249,115,22,.52) !important;
+  border-color:rgba(235,113,36,.52) !important;
 }
 /* Warm ambient glow behind hero card */
 .hero-visual { isolation:isolate; }
 .hero-visual::before {
   content:""; position:absolute; width:220px; height:220px;
   right:0; bottom:0; border-radius:50%;
-  background:rgba(249,115,22,.13); filter:blur(65px);
+  background:rgba(235,113,36,.13); filter:blur(65px);
   pointer-events:none; z-index:-1;
 }
 /* Keep headings governed by AU Studio colors; only orange on selected details */

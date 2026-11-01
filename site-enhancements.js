@@ -2,7 +2,7 @@
 /* AU Studio heading colors: main text and highlighted word are independently editable. */
 (()=>{'use strict';if(document.getElementById('au-heading-color-styles'))return;
 const style=document.createElement('style');style.id='au-heading-color-styles';style.textContent=`
-:root{--au-heading-main:#0F172A;--au-heading-highlight:#2563EB}
+:root{--au-heading-main:#3453a4;--au-heading-highlight:#3453a4}
 .section-heading h2,.contact-section h2{color:var(--au-heading-main)!important}
 .section-heading h2 .gradient,.contact-section h2 .gradient{
  color:var(--au-heading-highlight)!important;background:none!important;background-image:none!important;

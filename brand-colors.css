@@ -1,0 +1,32 @@
+/* Shared AU brand palette. */
+:root{
+ --au-blue:#3453a4;--au-orange:#eb7124;--au-charcoal:#231f20;
+ --blue:var(--au-blue);--deep:var(--au-blue);--accent:var(--au-blue);--accent-2:var(--au-orange);
+ --ink:var(--au-charcoal);--text:var(--au-charcoal);--muted:var(--au-charcoal);
+ --au-heading-main:var(--au-blue);--au-heading-highlight:var(--au-blue);
+ --au-orange-soft:#fbe3d3;
+}
+body{color:var(--au-charcoal)}
+h1,h2,h3,h4,.hero-card h2{color:var(--au-blue)!important}
+p,.lead,.intro,.body-large,.org,.contact-email,.edu-card small{color:var(--au-charcoal)}
+.gradient{color:var(--au-blue)!important;background:none!important;-webkit-text-fill-color:var(--au-blue)!important}
+.nav-cta,.btn.primary,.primary,#au-fixed-chat{background:var(--au-blue)!important;border-color:var(--au-blue)!important;color:#fff!important}
+.nav-cta:hover,.btn.primary:hover,.primary:hover{box-shadow:0 8px 24px #3453a433!important}
+.btn.outline,.secondary,.ghost,.small,.skill-icon,.degree-icon{color:var(--au-blue)!important}
+.degree-icon{border-color:var(--au-orange)!important;background:#f1f3fa!important}
+.section-heading .kicker,.contact-section .kicker{border-left-color:var(--au-orange)!important}
+.nav a:hover,.nav nav a:hover{color:var(--au-blue)!important;text-decoration:underline;text-decoration-color:var(--au-orange);text-underline-offset:7px}
+#home .mini-stats>div{background:linear-gradient(#231f204d,#231f2052),var(--au-orange)!important;border-color:var(--au-orange)!important;box-shadow:0 10px 24px #eb71241f!important}
+#home .mini-stats>div:nth-child(2){background:var(--au-blue)!important;border-color:var(--au-blue)!important;box-shadow:0 10px 24px #3453a41f!important}
+#home .mini-stats>div strong,#home .mini-stats>div span{color:#fff!important}
+.expertise-marquee{background:var(--au-blue)!important;border-color:var(--au-orange)!important}
+.expertise-track span{color:#fff!important}.expertise-track span::first-letter{color:var(--au-orange)!important}
+.hero-copy .role-highlight{color:var(--au-blue)!important;border-color:var(--au-orange)!important}
+.hero-copy .role-highlight #type,.hero-copy .role-highlight .cursor{color:var(--au-blue)!important}
+.about-philosophy{border-left-color:var(--au-orange)!important}
+.skill-card:hover,.edu-card:hover,.blog-feature:hover{border-color:var(--au-orange)!important}
+footer,footer span{color:var(--au-charcoal)!important}
+a:focus-visible,button:focus-visible{outline-color:var(--au-orange)!important}
+.welcome{background:var(--au-blue)!important}.welcome h1,.welcome p{color:#fff!important}.welcome .primary{background:#fff!important;color:var(--au-blue)!important}
+.identity,.identity b,.breadcrumb b,.sidebar nav button.active{color:var(--au-blue)!important}
+.sidebar nav button.active{box-shadow:inset 3px 0 var(--au-orange)}
