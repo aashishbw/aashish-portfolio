@@ -268,6 +268,53 @@ footer .au-footer-image{width:145px!important;max-width:100%!important;height:au
 <svg aria-hidden="true" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 .8A15.1 15.1 0 0 0 3 23.7L.9 31l7.5-2A15.2 15.2 0 1 0 16 .8zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.6 1.5 3.6 3.6 5 5.1 2 1.4 3.6 1.9 4.8 2.1.7.1 1.4.1 2-.1.6-.2 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z"></path></svg>
 </a><button class="chat-link" id="chatButton" type="button">💬 Open live chat</button></div><p class="chat-note" id="chatNote">Chat with me directly using the live-chat assistant.</p></div></section></main><footer><img alt="AU logo" class="au-footer-image" src="au-logo.png"/><span>© <span id="year"></span> Aashish Upadhyaya</span><span>Designed with purpose · Nepal</span><a href="#home">Back to top ↑</a></footer><script src="script.js"></script><!-- Floating WhatsApp contact -->
 
+<style>
+/* Site-owned chat launcher: consistent position on every viewport. */
+#au-fixed-chat {
+  position: fixed !important;
+  right: max(16px, env(safe-area-inset-right)) !important;
+  bottom: max(20px, env(safe-area-inset-bottom)) !important;
+  left: auto !important;
+  top: auto !important;
+  width: 56px !important;
+  height: 56px !important;
+  border: 0;
+  border-radius: 50%;
+  background: #245cda;
+  color: white;
+  box-shadow: 0 6px 20px rgba(18,48,110,.22);
+  z-index: 2147483000;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  transform: none !important;
+}
+#au-fixed-chat svg { width: 27px; height: 27px; fill: currentColor; }
+@media (max-width: 600px) { #au-fixed-chat { width: 52px !important; height: 52px !important; } }
+</style>
+<button id="au-fixed-chat" type="button" aria-label="Open AI chat" title="Chat with Aashish AI">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 6v2h12V9H6zm0 4v2h8v-2H6z"/></svg>
+</button>
+<script>
+(function(){
+  const launcher = document.getElementById('au-fixed-chat');
+  launcher.addEventListener('click', function(){
+    if(window.botpress && typeof window.botpress.open === 'function'){
+      window.botpress.open();
+    }
+  });
+  function hideNativeLauncher(){
+    if(window.botpress && typeof window.botpress.hide === 'function'){
+      window.botpress.hide();
+    }
+  }
+  if(window.botpress && typeof window.botpress.on === 'function'){
+    window.botpress.on('webchat:ready', hideNativeLauncher);
+  }
+  window.addEventListener('load', function(){setTimeout(hideNativeLauncher, 1500);});
+})();
+</script>
 <!-- Botpress AI assistant for Aashish Upadhyaya -->
 <style>
 /* Leave space for the Botpress chat launcher above the WhatsApp button. */
